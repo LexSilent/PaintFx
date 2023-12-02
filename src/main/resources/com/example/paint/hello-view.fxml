@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" styleClass="fondoGeneral" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.paint.HelloController">
+   <top>
+      <HBox prefHeight="56.0" prefWidth="964.0" styleClass="fondoHeader" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Paint Fx" textFill="#5fd1f5">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="51.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Pane>
+            <HBox prefHeight="51.0" prefWidth="792.0" spacing="5.0">
+               <children>
+                  <MenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="coloresGenericosItems" text="Formas">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#setformaCirculo" text="Circulo">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@Formas/formaCirculo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                      <MenuItem mnemonicParsing="false" onAction="#setformaCuadrado" text="Cuadrado">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Formas/formaCuadrado.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#setformaEstrella" text="Estrella">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Formas/formaEstrella.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <Separator opacity="0.25" orientation="VERTICAL" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" onAction="#setPincel" prefHeight="30.0" prefWidth="30.0" styleClass="btnPincel">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button mnemonicParsing="false" onAction="#setCuadrado" prefHeight="30.0" prefWidth="30.0" styleClass="btnCuadro">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button mnemonicParsing="false" onAction="#setCirculo" prefHeight="30.0" prefWidth="30.0" styleClass="btnCirculo">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#setBorrador" prefHeight="30.0" prefWidth="30.0" styleClass="btnBorrador">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button mnemonicParsing="false" onAction="#setEliminar" prefHeight="30.0" prefWidth="30.0" styleClass="btnEliminar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button mnemonicParsing="false" onAction="#guardarImagen" prefHeight="30.0" prefWidth="30.0" styleClass="btnGuardar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button mnemonicParsing="false" onAction="#btnImprimir" prefHeight="30.0" prefWidth="30.0" styleClass="btnImpresora">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Separator opacity="0.25" orientation="VERTICAL" HBox.hgrow="ALWAYS" />
+                  <ColorPicker fx:id="comboColor" onAction="#cambiarColor" styleClass="coloresGenericosItems">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ColorPicker>
+                  <ComboBox fx:id="comboCuadricula" onAction="#cambiosComboCuadricula" prefWidth="150.0" promptText="Color Solido" styleClass="coloresGenericosItems">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ComboBox>
+                  <JFXSlider fx:id="slideCuadricula" max="70.0" min="2.0" prefHeight="14.0" prefWidth="134.0" value="10.0">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </JFXSlider>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <Canvas fx:id="lienzo" height="153.0" onMouseClicked="#pegarImagenLienzo" onMouseDragged="#arrastrar" onMousePressed="#arrastrar" width="241.0" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor></Canvas>
+   </center>
+   <left>
+      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="800.0" prefWidth="0.0" spacing="15.0" styleClass="fondoHeader" BorderPane.alignment="CENTER">
+         <children>
+            <JFXComboBox fx:id="cbTamañoLienzo" focusColor="#09eb71" onAction="#cambiosTamañoLienzo" prefHeight="27.0" prefWidth="143.0" promptText="Tamaño del lienzo" style="-fx-background-color: #66b6ab;" unFocusColor="#025bf5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <Canvas fx:id="liencito" height="150.0" nodeOrientation="INHERIT" width="150.0" />
+            <JFXSlider fx:id="slideTamaño" max="140.0" min="3.0" onMouseClicked="#cambiarTamaño" onMouseDragged="#cambiarTamaño" value="30.0">
+               <effect>
+                  <Blend />
+               </effect>
+            </JFXSlider>
+            <ImageView fx:id="imagenReferencia" fitHeight="153.0" fitWidth="151.0" onMouseClicked="#setImagen" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@iconos/imagen.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXButton onAction="#sustituirImagenReferencia" prefHeight="0.0" prefWidth="88.0" ripplerFill="WHITE" styleClass="coloresGenericosItems" stylesheets="@estilos.css" text="Abrir">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="238.0" prefWidth="159.0" spacing="15.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton onAction="#rotarIzquierda" styleClass="btnRotate-left" textFill="TRANSPARENT">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton onAction="#rotarMitad" prefHeight="40.0" prefWidth="373.0" styleClass="btnRotate" textFill="TRANSPARENT">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton onAction="#rotarDerecha" styleClass="btnRotate-right" textFill="#ffffff00">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>

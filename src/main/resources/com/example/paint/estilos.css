@@ -1,0 +1,130 @@
+.fondoHeader{
+    -fx-background-color: #223D51;
+}
+.fondoGeneral{
+    -fx-background-color: #13222d;
+}
+.btnCuadro{
+    -fx-background-radius:5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-width: 30px;
+    -fx-background-color: #0f0f0f;
+    -fx-background-image: url("./iconos/check-box-empty.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 60% 60%;
+    -fx-background-position: 50% 50%;
+}
+.btnPincel{
+    -fx-background-radius:5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-width: 30px;
+    -fx-background-color: #0f0f0f;
+    -fx-background-image: url("./iconos/artistic-brush.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 60% 60%;
+    -fx-background-position: 50% 50%;
+}
+
+.btnImpresora{
+    -fx-background-radius:5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-width: 30px;
+    -fx-background-color: #0f0f0f;
+    -fx-background-image: url("./iconos/printer.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 60% 60%;
+    -fx-background-position: 50% 50%;
+}
+
+.btnCirculo{
+    -fx-background-radius:5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-width: 30px;
+    -fx-background-color: #0f0f0f;
+    -fx-background-image: url("./iconos/circle-shape-outline.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 60% 60%;
+    -fx-background-position: 50% 50%;
+}
+.btnBorrador{
+    -fx-background-radius:5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-width: 30px;
+    -fx-background-color: #0f0f0f;
+    -fx-background-image: url("./iconos/double-sided-eraser.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 60% 60%;
+    -fx-background-position: 50% 50%;
+}
+.btnEliminar{
+    -fx-background-radius:5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-width: 30px;
+    -fx-background-color: #0f0f0f;
+    -fx-background-image: url("./iconos/remove.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 60% 60%;
+    -fx-background-position: 50% 50%;
+}
+.btnGuardar{
+    -fx-background-radius:5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-width: 30px;
+    -fx-background-color: #0f0f0f;
+    -fx-background-image: url("./iconos/save.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 60% 60%;
+    -fx-background-position: 50% 50%;
+
+}.btnRotate-left{
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-width: 40px;
+    -fx-background-color: #66b6ab;
+    -fx-background-image: url("./iconos/rotate-left.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 70% 70%;
+    -fx-background-position: 50% 50%;
+}
+}.btnRotate{
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-width: 40px;
+    -fx-background-color: #66b6ab;
+    -fx-background-image: url("./iconos/rotate.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 70% 70%;
+    -fx-background-position: 50% 50%;
+}
+}.btnRotate-right{
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-width: 40px;
+    -fx-background-color: #66b6ab;
+    -fx-background-image: url("./iconos/rotate-right.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 70% 70%;
+    -fx-background-position: 50% 50%;
+}
+.coloresGenericosItems{
+    -fx-border-color: #a6f6af;
+    -fx-background-color: #66b6ab;
+
+}
